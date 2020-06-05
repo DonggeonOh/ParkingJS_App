@@ -1,11 +1,11 @@
-package com.example.parkingjs.ui.main;
+package com.dankook.parkingjs.ui.main;
 
 import android.os.Bundle;
 
-import com.example.parkingjs.R;
-import com.example.parkingjs.databinding.ActivityMainBinding;
-import com.example.parkingjs.ui.BaseActivity;
-import com.example.parkingjs.ui.camera.CameraActivity;
+import com.dankook.parkingjs.R;
+import com.dankook.parkingjs.databinding.ActivityMainBinding;
+import com.dankook.parkingjs.ui.BaseActivity;
+import com.dankook.parkingjs.ui.camera.CameraActivity;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding> {
 

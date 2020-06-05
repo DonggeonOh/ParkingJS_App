@@ -1,4 +1,4 @@
-package com.example.parkingjs;
+package com.dankook.parkingjs;
 
 import org.junit.Test;
 

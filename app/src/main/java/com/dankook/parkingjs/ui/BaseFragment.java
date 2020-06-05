@@ -1,4 +1,4 @@
-package com.example.parkingjs.ui;
+package com.dankook.parkingjs.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

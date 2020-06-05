@@ -1,9 +1,9 @@
-package com.example.parkingjs.ui;
+package com.dankook.parkingjs.ui;
 
 import androidx.lifecycle.ViewModel;
 
-import com.example.parkingjs.extension.databinding.AutoDisposableOwner;
-import com.example.parkingjs.extension.databinding.AutoDisposeException;
+import com.dankook.parkingjs.extension.databinding.AutoDisposableOwner;
+import com.dankook.parkingjs.extension.databinding.AutoDisposeException;
 
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Completable;

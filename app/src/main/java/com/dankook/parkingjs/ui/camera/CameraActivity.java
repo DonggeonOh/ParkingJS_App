@@ -1,4 +1,4 @@
-package com.example.parkingjs.ui.camera;
+package com.dankook.parkingjs.ui.camera;
 
 import android.Manifest;
 import android.content.Context;
@@ -8,13 +8,16 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.camera.core.ImageCapture;
 
-import com.example.parkingjs.R;
-import com.example.parkingjs.databinding.ActivityCameraBinding;
-import com.example.parkingjs.extension.tedpermission.PermissionUtil;
-import com.example.parkingjs.ui.BaseActivity;
+import com.dankook.parkingjs.R;
+import com.dankook.parkingjs.databinding.ActivityCameraBinding;
+import com.dankook.parkingjs.extension.tedpermission.PermissionUtil;
+import com.dankook.parkingjs.ui.BaseActivity;
 import com.gun0912.tedpermission.PermissionListener;
 
+import java.io.File;
 import java.util.List;
 
 public class CameraActivity extends BaseActivity<ActivityCameraBinding> {
@@ -42,14 +45,26 @@ public class CameraActivity extends BaseActivity<ActivityCameraBinding> {
 	}
 
 	private void initViews() {
+		binding.viewFinder.setImageCaptureButton(binding.ivCamera);
+		binding.viewFinder.setImageCaptureListener(
+				new ImageCapture.OnImageSavedListener() {
+					@Override
+					public void onImageSaved(@NonNull File file) {
 
+					}
+
+					@Override
+					public void onError(@NonNull ImageCapture.ImageCaptureError imageCaptureError,
+					                    @NonNull String message, @Nullable Throwable cause) {
+
+					}
+				});
 	}
 
 	private PermissionListener getPermissionListener() {
 		return new PermissionListener() {
 			@Override
 			public void onPermissionGranted() {
-				Toast.makeText(getApplicationContext(), "권한 허가되었습니다.", Toast.LENGTH_LONG).show();
 			}
 
 			@Override

@@ -1,4 +1,4 @@
-package com.example.parkingjs.ui.Splash;
+package com.dankook.parkingjs.ui.Splash;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,10 +7,10 @@ import android.view.animation.AnimationUtils;
 
 import androidx.annotation.UiThread;
 
-import com.example.parkingjs.R;
-import com.example.parkingjs.databinding.ActivitySplashBinding;
-import com.example.parkingjs.ui.BaseActivity;
-import com.example.parkingjs.ui.main.MainActivity;
+import com.dankook.parkingjs.R;
+import com.dankook.parkingjs.databinding.ActivitySplashBinding;
+import com.dankook.parkingjs.ui.BaseActivity;
+import com.dankook.parkingjs.ui.main.MainActivity;
 
 public class SplashActivity extends BaseActivity<ActivitySplashBinding> {
 

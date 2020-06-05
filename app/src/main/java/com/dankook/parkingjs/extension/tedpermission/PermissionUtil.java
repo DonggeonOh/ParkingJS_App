@@ -1,4 +1,4 @@
-package com.example.parkingjs.extension.tedpermission;
+package com.dankook.parkingjs.extension.tedpermission;
 
 import android.content.Context;
 

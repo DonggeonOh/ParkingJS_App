@@ -1,4 +1,4 @@
-package com.example.parkingjs.extension.databinding;
+package com.dankook.parkingjs.extension.databinding;
 
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Maybe;
