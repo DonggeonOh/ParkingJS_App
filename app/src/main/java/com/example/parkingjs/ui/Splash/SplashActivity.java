@@ -14,38 +14,38 @@ import com.example.parkingjs.ui.main.MainActivity;
 
 public class SplashActivity extends BaseActivity<ActivitySplashBinding> {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 
-        splashAnimation();
-    }
+		splashAnimation();
+	}
 
-    @UiThread
-    private void splashAnimation() {
-        Animation imageAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_splash);
-        binding.ivSplash.startAnimation(imageAnim);
-        imageAnim.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
+	@UiThread
+	private void splashAnimation() {
+		Animation imageAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_splash);
+		binding.ivSplash.startAnimation(imageAnim);
+		imageAnim.setAnimationListener(new Animation.AnimationListener() {
+			@Override
+			public void onAnimationStart(Animation animation) {
 
-            }
+			}
 
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                finish();
-            }
+			@Override
+			public void onAnimationEnd(Animation animation) {
+				startActivity(new Intent(getApplicationContext(), MainActivity.class));
+				finish();
+			}
 
-            @Override
-            public void onAnimationRepeat(Animation animation) {
+			@Override
+			public void onAnimationRepeat(Animation animation) {
 
-            }
-        });
-    }
+			}
+		});
+	}
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_splash;
-    }
+	@Override
+	protected int getLayoutId() {
+		return R.layout.activity_splash;
+	}
 }
