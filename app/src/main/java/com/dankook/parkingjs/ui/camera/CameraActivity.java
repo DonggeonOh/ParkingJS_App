@@ -16,9 +16,7 @@ import com.dankook.parkingjs.R;
 import com.dankook.parkingjs.databinding.ActivityCameraBinding;
 import com.dankook.parkingjs.extension.tedpermission.PermissionUtil;
 import com.dankook.parkingjs.ui.BaseActivity;
-import com.gun0912.tedpermission.PermissionListener;
 
-import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -66,7 +64,7 @@ public class CameraActivity extends BaseActivity<ActivityCameraBinding> {
 		if (getApplicationContext()
 				.getPackageManager()
 				.hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
-			PermissionUtil.requestPermission(getApplicationContext(), getPermissionListener(),
+			PermissionUtil.requestPermission(getApplicationContext(),
 					Manifest.permission.CAMERA,
 					Manifest.permission.READ_EXTERNAL_STORAGE,
 					Manifest.permission.WRITE_EXTERNAL_STORAGE);
@@ -75,21 +73,6 @@ public class CameraActivity extends BaseActivity<ActivityCameraBinding> {
 					Toast.LENGTH_LONG).show();
 			finish();
 		}
-	}
-
-	private PermissionListener getPermissionListener() {
-		return new PermissionListener() {
-			@Override
-			public void onPermissionGranted() {
-			}
-
-			@Override
-			public void onPermissionDenied(List<String> deniedPermissions) {
-				Toast.makeText(getApplicationContext(), "다음 권한이 거부되어 실행할 수 없습니다.\n" +
-						deniedPermissions.toString(), Toast.LENGTH_LONG).show();
-				finish();
-			}
-		};
 	}
 
 	public static Intent getLaunchIntent(@NonNull Context context) {
