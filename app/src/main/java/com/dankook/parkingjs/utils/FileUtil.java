@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class FileUtil {
 
-	private static final String rootDirName = "/honMaker";
+	private static final String rootDirName = "/parkingJS";
 
 	@NonNull
 	public static File createNewFile() {
