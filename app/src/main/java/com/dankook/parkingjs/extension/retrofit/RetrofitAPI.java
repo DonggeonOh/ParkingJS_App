@@ -9,6 +9,6 @@ import retrofit2.http.Part;
 public interface RetrofitAPI {
 
 	@Multipart
-	@POST("/")
-	Call<Integer> sendImage(@Part MultipartBody.Part image);
+	@POST("/upload")
+	Call<Integer> sendImage(@Part MultipartBody.Part uploadFile);
 }

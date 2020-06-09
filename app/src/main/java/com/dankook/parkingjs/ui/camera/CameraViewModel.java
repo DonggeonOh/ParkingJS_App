@@ -43,7 +43,7 @@ public class CameraViewModel extends BaseViewModel {
 	}
 
 	private void sendImage(File file) {
-		MultipartBody.Part body = MultipartBody.Part.createFormData("image", file.getName(),
+		MultipartBody.Part body = MultipartBody.Part.createFormData("uploadFile", file.getName(),
 						RequestBody.create(MediaType.parse("image/jpeg"), file));
 
 		Call<Integer> call = RetrofitClient.api.sendImage(body);
