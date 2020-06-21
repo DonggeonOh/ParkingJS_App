@@ -57,7 +57,7 @@ public class CameraActivity extends BaseActivity<ActivityCameraBinding> {
 		};
 
 		Timer timer = new Timer();
-		timer.schedule(captureTask, 10000, 10000);
+		timer.schedule(captureTask, 10000, 30000);
 	}
 
 	private void checkCameraHardware() {
